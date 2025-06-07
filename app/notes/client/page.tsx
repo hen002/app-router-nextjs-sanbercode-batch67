@@ -19,7 +19,7 @@ export default function Notes() {
 
     return (
         <ul>
-            {data?.map((el: { id: number; title: string }) =>
+            {data.map((el: { id: number; title: string }) =>
             (
                 <li key={el.id}>{el.title}</li>
             )) || []}

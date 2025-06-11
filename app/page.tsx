@@ -1,7 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './page.module.css'
+import { dataStore } from '@/store/dataStore'
 
 export default function Home() {
+  const { inc } = dataStore()
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -17,6 +22,7 @@ export default function Home() {
           height={38}
           priority
         />
+        <button onClick={() => inc()}>Count ++</button>
       </main>
       <footer className={styles.footer}>
         <a
